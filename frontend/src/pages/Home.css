@@ -1,0 +1,61 @@
+.home-header {
+  margin-bottom: 40px;
+}
+
+.home-title {
+  margin-top: 10px;
+}
+
+/* ── Grid ── */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* ── Empty state ── */
+.home-empty {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--text-muted);
+}
+
+.home-empty-icon {
+  font-size: 36px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.home-empty p {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* ── Loading skeletons ── */
+.home-loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.skeleton-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.skeleton {
+  background: var(--bg-hover);
+  border-radius: 6px;
+  animation: shimmer 1.5s ease infinite;
+}
+
+.skeleton-meta  { height: 14px; width: 40%; margin-bottom: 16px; }
+.skeleton-title { height: 28px; width: 80%; margin-bottom: 10px; }
+.skeleton-body  { height: 60px; width: 100%; }
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}

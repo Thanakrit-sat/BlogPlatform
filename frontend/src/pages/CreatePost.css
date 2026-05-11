@@ -1,0 +1,72 @@
+.create-page { max-width: 720px; }
+
+.create-header { margin-bottom: 36px; }
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create-title-input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  padding: 0;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 20px;
+  transition: border-color .2s;
+}
+
+.create-title-input:focus { border-color: var(--accent); }
+.create-title-input::placeholder { color: var(--text-muted); }
+
+.create-editor-wrap {
+  position: relative;
+}
+
+.create-content-input {
+  width: 100%;
+  min-height: 400px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  outline: none;
+  resize: vertical;
+  transition: border-color .2s, box-shadow .2s;
+  font-family: var(--font-body);
+}
+
+.create-content-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.create-content-input::placeholder { color: var(--text-muted); }
+
+.create-word-count {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.create-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
